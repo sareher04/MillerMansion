@@ -954,8 +954,6 @@ nav {
 	margin: 0 auto;
 	display: grid;
 	gap: 2rem;
-
-	/* Automatically adjusts columns cleanly */
 	grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
 }
 
@@ -966,7 +964,6 @@ nav {
 	padding: 2.5rem 2rem;
 	text-align: center;
 
-	/* THIS FIXES UNEVENNESS */
 	display: flex;
 	flex-direction: column;
 	align-items: center;
@@ -980,17 +977,23 @@ nav {
 	transform: translateY(-4px);
 }
 
+/* Name */
 .contributor-name {
 	font-size: 1.2rem;
 	font-weight: 700;
 	margin-bottom: 0.5rem;
+	line-height: 1.3;
 
-	/* Prevent ugly name breaking */
+	/* Prevent ugly hyphen splitting */
 	hyphens: none;
 	word-break: normal;
 	overflow-wrap: normal;
+
+	/* Reserve equal space for names */
+	min-height: 2.8em;
 }
 
+/* Role */
 .contributor-role {
 	color: var(--accent);
 	font-size: 0.95rem;
@@ -1001,7 +1004,7 @@ nav {
 
 /* GitHub button */
 .contributor-button {
-	margin-top: auto; /* pushes button to bottom */
+	margin-top: auto;
 	display: inline-flex;
 	align-items: center;
 	justify-content: center;
@@ -1389,6 +1392,7 @@ footer {
 	}
 
 }
+
 
 
 
