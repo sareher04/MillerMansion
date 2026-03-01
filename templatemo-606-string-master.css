@@ -1047,9 +1047,9 @@ nav {
 }
 
 .skills-grid {
-	display: grid;
-	grid-template-columns: repeat(2, 1fr);
-	gap: 2rem;
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
+    gap: 2rem;
 }
 
 .skills-card {
@@ -1083,9 +1083,9 @@ nav {
 }
 
 .skills-avatar img {
-	width: 100%;
-	height: 100%;
-	object-fit: cover;
+    width: 80%;
+    height: 80%;
+    object-fit: contain;
 }
 
 .skills-name {
