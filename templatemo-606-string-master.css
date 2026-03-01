@@ -1072,6 +1072,8 @@ nav {
 	display: flex;
 	align-items: center;
 	gap: 1rem;
+	margin-bottom: 1.2rem;
+
 }
 
 .skills-avatar {
@@ -1104,23 +1106,23 @@ nav {
 	justify-content: center;
 
 	margin-bottom: 1.5rem;
-	padding: 0.7rem 1.4rem;
+	padding: 0.7rem 1.6rem;
 
 	background: var(--accent);
 	color: var(--bg-dark);
 
-	border-radius: 8px;
+	border-radius: 999px; 
 	text-decoration: none;
 	font-weight: 600;
 	font-size: 0.85rem;
 
-	transition: all 0.2s ease;
+	transition: all 0.25s ease;
 }
 
 .skills-button:hover {
 	background: var(--accent-light);
-	transform: translateY(-2px);
-	box-shadow: 0 8px 20px rgba(245, 158, 11, 0.25);
+	transform: translateY(-3px);
+	box-shadow: 0 10px 25px rgba(245, 158, 11, 0.3);
 }
 
 /* CTA Section */
