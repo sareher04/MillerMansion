@@ -1041,44 +1041,40 @@ nav {
     min-height: 320px;
   }
 }
-/* Testimonials */
-.testimonials {
+/* skills */
+.skills {
 	padding: 6rem 2rem;
 }
 
-.testimonials-grid {
+.skills-grid {
 	display: grid;
-	grid-template-columns: repeat(3, 1fr);
+	grid-template-columns: repeat(2, 1fr);
 	gap: 2rem;
 }
 
-.testimonial-card {
+.skills-card {
 	background: var(--bg-card);
 	border: 1px solid var(--border);
 	border-radius: 16px;
 	padding: 2rem;
 }
 
-.testimonial-stars {
-	color: var(--accent);
-	font-size: 1rem;
-	margin-bottom: 1rem;
-}
 
-.testimonial-text {
+
+.skills-text {
 	color: var(--text-secondary);
 	font-size: 1rem;
 	line-height: 1.7;
 	margin-bottom: 1.5rem;
 }
 
-.testimonial-author {
+.skills-author {
 	display: flex;
 	align-items: center;
 	gap: 1rem;
 }
 
-.testimonial-avatar {
+.skills-avatar {
 	width: 64px;
 	height: 64px;
 	border-radius: 50%;
@@ -1086,18 +1082,18 @@ nav {
 	flex-shrink: 0;
 }
 
-.testimonial-avatar img {
+.skills-avatar img {
 	width: 100%;
 	height: 100%;
 	object-fit: cover;
 }
 
-.testimonial-name {
+.skills-name {
 	font-weight: 600;
 	font-size: 0.95rem;
 }
 
-.testimonial-title {
+.skills-title {
 	color: var(--text-muted);
 	font-size: 0.8rem;
 }
@@ -1257,7 +1253,7 @@ footer {
 
 	.features-grid,
 	.pricing-grid,
-	.testimonials-grid {
+	.skills-grid {
 		grid-template-columns: 1fr;
 		max-width: 500px;
 		margin: 0 auto;
