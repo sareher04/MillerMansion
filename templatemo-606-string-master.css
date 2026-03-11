@@ -261,22 +261,15 @@ nav {
 	background: var(--bg-card);
 	border: 1px solid var(--border);
 	border-radius: 20px;
-	padding: 1rem;
+	padding: 1.5rem;
 	box-shadow: 0 25px 50px rgba(0, 0, 0, 0.5);
-
-	display: flex;
-	align-items: center;
-	justify-content: center;
-
-	width: 100%;
-	overflow: hidden;
 }
 
 .hero-logo {
 	display: block;
-	width: 100%;
-	max-width: 520px;
+	max-width: 100%;
 	height: auto;
+	max-height: 500px;
 	object-fit: contain;
 	margin: 0 auto;
 }
@@ -1459,6 +1452,7 @@ footer {
 	}
 
 }
+
 
 
 
