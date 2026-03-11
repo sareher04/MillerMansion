@@ -257,21 +257,13 @@ nav {
 	z-index: 1;
 }
 
-.logo-card {
-	background: var(--bg-card);
-	border: 1px solid var(--border);
-	border-radius: 20px;
-	padding: 1.5rem;
-	box-shadow: 0 25px 50px rgba(0, 0, 0, 0.5);
-}
-
-.hero-logo {
-	display: block;
-	max-width: 100%;
-	height: auto;
-	max-height: 500px;
-	object-fit: contain;
+.hero-container {
+	max-width: 1200px;
 	margin: 0 auto;
+	display: grid;
+	grid-template-columns: 1fr 1fr;
+	gap: 4rem;
+	align-items: center;
 }
 
 .guitar-card {
@@ -1452,6 +1444,7 @@ footer {
 	}
 
 }
+
 
 
 
