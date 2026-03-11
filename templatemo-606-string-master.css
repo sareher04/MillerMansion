@@ -275,9 +275,11 @@ nav {
 
 .hero-logo {
 	display: block;
-	max-width: 100%;
+	max-width: 85%;
+	max-height: 400px;
 	height: auto;
 	object-fit: contain;
+	margin: 0 auto;
 }
 
 .guitar-card {
@@ -1458,6 +1460,7 @@ footer {
 	}
 
 }
+
 
 
 
