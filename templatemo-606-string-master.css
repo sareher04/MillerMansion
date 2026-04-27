@@ -14,9 +14,9 @@ https://templatemo.com/tm-606-string-master
 }
 
 :root {
-	--bg-dark: #0d0d0d;
-	--bg-card: #1a1a1a;
-	--bg-elevated: #242424;
+	--bg-dark: rgba(13, 13, 13, 0.82);
+	--bg-card: rgba(26, 26, 26, 0.88);
+	--bg-elevated: rgba(36, 36, 36, 0.88);
 	--accent: #f59e0b;
 	--accent-light: #fbbf24;
 	--accent-dark: #d97706;
@@ -32,9 +32,21 @@ html {
 
 body {
 	font-family: 'Space Grotesk', sans-serif;
-	background: var(--bg-dark);
+	background-color: #0d0d0d;
 	color: var(--text-primary);
 	line-height: 1.6;
+}
+
+body::before {
+	content: '';
+	position: fixed;
+	inset: 0;
+	z-index: -1;
+	background-image: url('images/hero-bg.jpg');
+	background-size: cover;
+	background-position: center;
+	background-repeat: no-repeat;
+	filter: grayscale(100%);
 }
 
 /* Navigation */
@@ -132,11 +144,8 @@ nav {
 .hero::before {
 	content: '';
 	position: absolute;
-	top: -50%;
-	right: -20%;
-	width: 80%;
-	height: 150%;
-	background: radial-gradient(ellipse, rgba(245, 158, 11, 0.08) 0%, transparent 70%);
+	inset: 0;
+	background: rgba(0, 0, 0, 0.55);
 	pointer-events: none;
 }
 
@@ -988,6 +997,22 @@ nav {
   box-shadow: 0 12px 30px rgba(0,0,0,0.5);
 }
 
+.contributor-photo {
+  width: 110px;
+  height: 110px;
+  border-radius: 50%;
+  object-fit: cover;
+  margin-bottom: 1.25rem;
+  border: 2px solid var(--border);
+}
+
+.contributor-photo.placeholder {
+  background: var(--bg-elevated);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
 .contributor-name {
   font-size: 1.25rem;
   font-weight: 700;
@@ -1184,6 +1209,8 @@ nav {
 footer {
 	padding: 4rem 2rem 2rem;
 	border-top: 1px solid var(--border);
+	background: rgba(13, 13, 13, 0.92);
+	backdrop-filter: blur(10px);
 }
 
 .footer-container {
@@ -1251,6 +1278,153 @@ footer {
 
 .footer-bottom a:hover {
 	color: var(--accent-light);
+}
+
+/* Screenshots & Demo */
+.screenshots {
+  background: var(--bg-dark);
+  padding: 6rem 1rem;
+}
+
+.screenshot-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 1.5rem;
+  margin-top: 3rem;
+}
+
+.screenshot-card {
+  background: var(--bg-card);
+  border: 1px solid var(--border);
+  border-radius: 12px;
+  overflow: hidden;
+  transition: transform 0.2s ease, border-color 0.2s ease;
+}
+
+.screenshot-card:hover {
+  transform: translateY(-4px);
+  border-color: var(--accent);
+}
+
+.screenshot-card img {
+  width: 100%;
+  height: 200px;
+  object-fit: cover;
+  display: block;
+}
+
+.screenshot-label {
+  padding: 0.75rem 1rem;
+  font-size: 0.875rem;
+  font-weight: 500;
+  color: var(--text-secondary);
+  text-align: center;
+}
+
+.video-placeholder {
+  background: var(--bg-card);
+  border: 2px dashed var(--border);
+  border-radius: 12px;
+  padding: 4rem 2rem;
+  text-align: center;
+  color: var(--text-muted);
+  font-size: 1rem;
+  margin-top: 1.5rem;
+}
+
+.demo-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 1.5rem;
+  margin-top: 2rem;
+}
+
+.demo-card {
+  background: var(--bg-card);
+  border: 1px solid var(--border);
+  border-radius: 12px;
+  overflow: hidden;
+}
+
+.demo-label {
+  padding: 0.75rem 1rem;
+  font-size: 0.875rem;
+  font-weight: 600;
+  color: var(--accent);
+  text-align: center;
+  border-bottom: 1px solid var(--border);
+}
+
+.demo-card iframe {
+  width: 100%;
+  height: 200px;
+  border: none;
+  display: block;
+}
+
+.demo-card .video-placeholder {
+  height: 200px;
+  border: none;
+  border-radius: 0;
+  margin: 0;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+@media (max-width: 900px) {
+  .demo-grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+@media (max-width: 560px) {
+  .demo-grid {
+    grid-template-columns: 1fr;
+  }
+}
+
+@media (max-width: 900px) {
+  .screenshot-grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+@media (max-width: 560px) {
+  .screenshot-grid {
+    grid-template-columns: 1fr;
+  }
+}
+
+/* Project Summary */
+.project-summary {
+  background: var(--bg-elevated);
+  border-top: 1px solid var(--border);
+  border-bottom: 1px solid var(--border);
+  padding: 2.5rem 1rem;
+  text-align: center;
+}
+
+.summary-sentence {
+  font-size: 1.2rem;
+  font-weight: 500;
+  color: var(--text-primary);
+  max-width: 720px;
+  margin: 0 auto 1.5rem;
+  line-height: 1.6;
+}
+
+.footer-course-link {
+  display: inline-block;
+  margin-top: 1rem;
+  color: var(--accent);
+  text-decoration: none;
+  font-size: 0.875rem;
+  font-weight: 500;
+}
+
+.footer-course-link:hover {
+  color: var(--accent-light);
 }
 
 /* Mobile Menu */
